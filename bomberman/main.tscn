@@ -31,10 +31,10 @@ environment = SubResource("Environment_1bvp3")
 compositor = SubResource("Compositor_lquwl")
 
 [node name="player" parent="." instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2558421, 3.882553, -0.18964672)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -9)
 
 [node name="enemy" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.769905, 1.9064822, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 9)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.41701066, 0.9089015, 0, -0.9089015, -0.41701066, 0, 10.60475, 261.4724)
@@ -43,7 +43,7 @@ transform = Transform3D(1, 0, 0, 0, -0.41701066, 0.9089015, 0, -0.9089015, -0.41
 transform = Transform3D(0.9998273, -0.004371499, -0.018057382, 0.010965925, 0.9234233, 0.38362634, 0.014997587, -0.38375822, 0.9233119, -0.10635996, 4.699501, 6.3224697)
 
 [node name="map" parent="." instance=ExtResource("3_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -10.5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("5_lquwl")
