@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b32niowh7fvn5"]
+
+[ext_resource type="Script" uid="uid://cnpbuspk5pu6r" path="res://enemy/enemy.gd" id="1_2mvqj"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
+radius = 0.4
+
+[sub_resource type="Skin" id="Skin_oul6g"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
+
+[node name="enemy" type="CharacterBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_2mvqj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_kqu6x")
+skin = SubResource("Skin_oul6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kqu6x")
+
+[node name="FloorDetector" type="RayCast3D" parent="."]
+target_position = Vector3(0, -1.5, 0)

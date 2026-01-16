@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://di3t68sbjswjn"]
+
+[ext_resource type="Script" uid="uid://nuvj2dnro202" path="res://menu/main_menu.gd" id="1_0gkbj"]
+
+[sub_resource type="Gradient" id="Gradient_mnm7o"]
+colors = PackedColorArray(0.16032484, 0, 0.9743872, 1, 0.941298, 0.3669996, 0.2888162, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kgdaa"]
+gradient = SubResource("Gradient_mnm7o")
+
+[sub_resource type="LabelSettings" id="LabelSettings_mnm7o"]
+font_size = 64
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0gkbj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_kgdaa")
+
+[node name="title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 98.0
+offset_right = 212.0
+offset_bottom = 368.0
+grow_horizontal = 2
+text = "BOMBERMAN
+
+"
+label_settings = SubResource("LabelSettings_mnm7o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 277.0
+offset_right = 766.0
+offset_bottom = 579.0
+theme_override_constants/separation = 30
+
+[node name="PlayBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Jouer"
+
+[node name="CreditBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Crédit
+"
+
+[node name="ControlBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Contrôle"
+
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quitter
+"
+
+[connection signal="button_down" from="VBoxContainer/PlayBtn" to="." method="_on_play_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/CreditBtn" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="VBoxContainer/ControlBtn" to="." method="_on_control_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_button_down"]

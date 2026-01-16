@@ -1,0 +1,143 @@
+[gd_scene load_steps=4 format=3 uid="uid://mpmofdlmu38o"]
+
+[ext_resource type="Script" uid="uid://kdq1i66liwf7" path="res://menu/control.gd" id="1_rep6p"]
+
+[sub_resource type="Gradient" id="Gradient_fey7r"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rep6p"]
+gradient = SubResource("Gradient_fey7r")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rep6p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_rep6p")
+
+[node name="control" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.0
+offset_top = 83.0
+offset_right = 134.0
+offset_bottom = 171.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "Contrôle"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 239.0
+offset_top = -122.0
+offset_right = 948.0
+offset_bottom = -67.0
+grow_vertical = 2
+theme_override_constants/separation = 400
+
+[node name="clavier" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Clavier"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/clavier"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = 37.0
+offset_right = 433.0
+offset_bottom = 226.0
+grow_vertical = 0
+
+[node name="Direction" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Monter
+Gauche
+Descendre 
+Droitre"
+
+[node name="zqsd" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "   Z 
+   Q 
+   S 
+   D"
+
+[node name="arrow" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "| arrow_up 
+|  arrow_left 
+|  arrow_down 
+|  arrow_right "
+
+[node name="mannette" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Mannette"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/mannette"]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 92.0
+offset_right = 292.0
+offset_bottom = 329.0
+
+[node name="Label" type="Label" parent="HBoxContainer/mannette/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Monter
+Gauche
+Descendre
+Droite
+"
+
+[node name="Label2" type="Label" parent="HBoxContainer/mannette/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "   L3_UP
+   L3_LEFT
+   L3_down
+   L3_right
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_top = -81.0
+offset_right = 62.0
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MainMenuBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Menu Principal"
+
+[connection signal="button_down" from="VBoxContainer/MainMenuBtn" to="." method="_on_main_menu_btn_button_down"]

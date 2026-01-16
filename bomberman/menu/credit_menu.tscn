@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://n1xp1sfbtncb"]
+
+[ext_resource type="Script" uid="uid://bs46mtsqdb1kd" path="res://menu/credit_menu.gd" id="1_1a2d4"]
+
+[sub_resource type="Gradient" id="Gradient_155cp"]
+colors = PackedColorArray(0.19607843, 0.19607843, 0.47058824, 1, 0.19607843, 0.19607843, 0.47058824, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bm24b"]
+gradient = SubResource("Gradient_155cp")
+
+[node name="CreditMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1a2d4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_bm24b")
+
+[node name="Contexte" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -447.0
+offset_top = 45.0
+offset_right = 448.0
+offset_bottom = 222.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Ce jeu a été créé au cours d'un projet scolaire. 
+Par une équipe de 3 élèves en BUT 3 informatique 
+au cours de la ressource R5.A.06 - Programmation multimédia
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -99.0
+offset_right = 48.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MainMenuBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Menu Principal
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -74.0
+offset_right = 244.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Equipe" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Equipe : 
+
+Cornu pierre 
+Gauze Titouan
+Gourgues Robin"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Enseignant :
+
+Gaël Fenet-Garde
+
+"
+
+[connection signal="button_down" from="VBoxContainer/MainMenuBtn" to="." method="_on_main_menu_btn_button_down"]

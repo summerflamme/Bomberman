@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dppeyc3j4yr7y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_17yb8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_17yb8"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="Skin" id="Skin_r8qam"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_guj2u"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_17yb8"]
+size = Vector3(20.181702, 0.43311718, 20.507446)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_17yb8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.9999835, 0, 0.005759552, 0, 1, 0, -0.005759552, 0, -0.9999835, -0.5608388, 0.13515186, -1.1099455)
+mesh = SubResource("BoxMesh_17yb8")
+skin = SubResource("Skin_r8qam")
+surface_material_override/0 = SubResource("ORMMaterial3D_guj2u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6893616, -0.026628897, -0.9215698)
+shape = SubResource("BoxShape3D_17yb8")
