@@ -1,26 +1,28 @@
 extends CharacterBody3D
-
 class_name Enemy
 
-@export var vitesse:= 5
-@export var gravity:=9.8
+@export var vitesse := 5
+@export var gravity := 9.8
+
 @onready var rayCast: RayCast3D = $FloorDetector
+@onready var anim: AnimationPlayer = $Character/AnimationPlayer
+@onready var sprite: Node3D = $Character
 
-
-var direction:= Vector3.ZERO
+var direction := Vector3.ZERO
+var is_move := false
 
 func _ready():
 	randomize()
+	anim.play("Idle")
+
 	await get_tree().create_timer(1).timeout
-	_chooose_random_direction()
-	await get_tree().physics_frame
-	
+	_choose_random_direction()
+
 	var timer := Timer.new()
 	timer.wait_time = 1.0
 	timer.autostart = true
-	timer.timeout.connect(_chooose_random_direction)
+	timer.timeout.connect(_choose_random_direction)
 	add_child(timer)
-	_chooose_random_direction()	
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -28,18 +30,34 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = -0.1
 
-	if is_on_floor():
-		if not rayCast.is_colliding():
-			_chooose_random_direction()
+	if is_on_floor() and not rayCast.is_colliding():
+		_choose_random_direction()
 
 	velocity.x = direction.x * vitesse
 	velocity.z = direction.z * vitesse
 
+	is_move = direction != Vector3.ZERO
+
+	if is_move:
+		anim.play("Walk")
+	else:
+		anim.play("Idle")
+
+	if direction != Vector3.ZERO:
+		sprite.look_at(global_position - direction, Vector3.UP)
+
 	move_and_slide()
 
-func _chooose_random_direction():
-	var x := randi_range(-1, 1)
-	var z := randi_range(-1, 1)
-	if x == 0 and z == 0:
-		x = 1
-	direction = Vector3(x, 0, z).normalized()
+func _choose_random_direction():
+	var axis := randi_range(0, 1)
+
+	if axis == 0:
+		var x := randi_range(-1, 1)
+		if x == 0:
+			x = 1
+		direction = Vector3(x, 0, 0)
+	else:
+		var z := randi_range(-1, 1)
+		if z == 0:
+			z = 1
+		direction = Vector3(0, 0, z)
