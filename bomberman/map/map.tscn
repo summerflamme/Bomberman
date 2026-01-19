@@ -1,0 +1,793 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfmrf3mxu3k87"]
+
+[ext_resource type="PackedScene" uid="uid://5cfv271oubh0" path="res://map/floor.tscn" id="1_hgrid"]
+[ext_resource type="PackedScene" uid="uid://bc6cvqyq7xse2" path="res://border.tscn" id="2_a0dt8"]
+[ext_resource type="PackedScene" uid="uid://bjefrwq4m6ohe" path="res://map/inside_walls.tscn" id="3_4hjbm"]
+[ext_resource type="PackedScene" uid="uid://ci226dy7lowpi" path="res://map/breakable_wall.tscn" id="4_lgq1i"]
+
+[node name="map" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_hgrid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, -0.5, 10.5)
+
+[node name="Border" parent="." instance=ExtResource("2_a0dt8")]
+
+[node name="Border2" parent="." instance=ExtResource("2_a0dt8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21, 0, 0)
+
+[node name="Border3" parent="." instance=ExtResource("2_a0dt8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 20)
+
+[node name="Border4" parent="." instance=ExtResource("2_a0dt8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 1)
+
+[node name="Inside_walls" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Inside_walls2" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Inside_walls3" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="Inside_walls4" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
+
+[node name="Inside_walls5" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 10)
+
+[node name="Inside_walls6" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
+
+[node name="Inside_walls7" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
+
+[node name="Inside_walls8" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
+
+[node name="Inside_walls9" parent="." instance=ExtResource("3_4hjbm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 18)
+
+[node name="Breakable_Wall10" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 15.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall10/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall9" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 13.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall9/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall8" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 11.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall8/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall7" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 9.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall7/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall6" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 7.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall6/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall5" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 5.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall5/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall4" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, 17.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall2" parent="Breakable_Wall4" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall4/Breakable_Wall2/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall3" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.5, 19.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall3/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall2" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, 19.5)
+
+[node name="Breakable_Wall" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, 1.5)
+
+[node name="Breakable_Wall" parent="Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall" parent="Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall/Breakable_Wall" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="Breakable_Wall12" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.5, 4.5)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="." instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.5, 2.5)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall12" parent="Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall12" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall12/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Breakable_Wall11" parent="Breakable_Wall11/Breakable_Wall12/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11/Breakable_Wall11" instance=ExtResource("4_lgq1i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)

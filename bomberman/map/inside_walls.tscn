@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjefrwq4m6ohe"]
+
+[ext_resource type="PackedScene" uid="uid://dnanmigh73vbk" path="res://map/unbreakable_wall.tscn" id="1_0rknf"]
+
+[node name="Inside_walls" type="Node3D"]
+
+[node name="Unbreakable_Wall" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall2" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall3" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall4" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall5" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall6" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall7" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall8" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0.5, 0.5)
+
+[node name="Unbreakable_Wall9" parent="." instance=ExtResource("1_0rknf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0.5, 0.5)
