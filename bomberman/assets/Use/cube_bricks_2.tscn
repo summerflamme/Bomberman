@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbs5ah6he05rs"]
+
+[ext_resource type="PackedScene" uid="uid://ba4j2hueqbitg" path="res://assets/Ultimate Platformer Pack - Dec 2021/Cubes/glTF/Cube_Bricks.gltf" id="1_speyj"]
+
+[node name="Cube_Bricks2" instance=ExtResource("1_speyj")]

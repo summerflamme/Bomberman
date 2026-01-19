@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dc48scts0nypi"
+path="res://.godot/imported/Gem_Pink.obj-1fc303ecb8152bc56dd580c4a6359773.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Gem_Pink.obj-1fc303ecb8152bc56dd580c4a6359773.mesh"]
+
+source_file="res://assets/Ultimate Platformer Pack - Dec 2021/Powerups and Pickups/OBJ/Gem_Pink.obj"
+dest_files=["res://.godot/imported/Gem_Pink.obj-1fc303ecb8152bc56dd580c4a6359773.mesh", "res://.godot/imported/Gem_Pink.obj-1fc303ecb8152bc56dd580c4a6359773.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

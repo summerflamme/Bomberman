@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b32niowh7fvn5"]
+[gd_scene load_steps=7 format=3 uid="uid://b32niowh7fvn5"]
 
 [ext_resource type="Script" uid="uid://cnpbuspk5pu6r" path="res://enemy/enemy.gd" id="1_2mvqj"]
+[ext_resource type="PackedScene" uid="uid://00th6r8tlfu8" path="res://enemy/enemySpritre.tscn" id="2_ofsxj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ppra6"]
+size = Vector3(2.5851746, 3.236847, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
 radius = 0.4
@@ -15,11 +19,19 @@ axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_2mvqj")
 
+[node name="Character" parent="." instance=ExtResource("2_ofsxj")]
+
+[node name="spriteCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035873413, 1.6170807, 0)
+shape = SubResource("BoxShape3D_ppra6")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_kqu6x")
 skin = SubResource("Skin_oul6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape3D_kqu6x")
 
 [node name="FloorDetector" type="RayCast3D" parent="."]
