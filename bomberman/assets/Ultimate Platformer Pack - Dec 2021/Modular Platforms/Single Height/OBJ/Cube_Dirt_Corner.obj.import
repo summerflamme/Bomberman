@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0f57x736ugf7"
+path="res://.godot/imported/Cube_Dirt_Corner.obj-7e196ea5741d7552139574efce84f11f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cube_Dirt_Corner.obj-7e196ea5741d7552139574efce84f11f.mesh"]
+
+source_file="res://assets/Ultimate Platformer Pack - Dec 2021/Modular Platforms/Single Height/OBJ/Cube_Dirt_Corner.obj"
+dest_files=["res://.godot/imported/Cube_Dirt_Corner.obj-7e196ea5741d7552139574efce84f11f.mesh", "res://.godot/imported/Cube_Dirt_Corner.obj-7e196ea5741d7552139574efce84f11f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

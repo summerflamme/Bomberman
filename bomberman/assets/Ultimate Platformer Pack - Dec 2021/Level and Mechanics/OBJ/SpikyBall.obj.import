@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4odn8xn0xix2"
+path="res://.godot/imported/SpikyBall.obj-54ab70eeeef75b8c8b55768f3c0df3e0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SpikyBall.obj-54ab70eeeef75b8c8b55768f3c0df3e0.mesh"]
+
+source_file="res://assets/Ultimate Platformer Pack - Dec 2021/Level and Mechanics/OBJ/SpikyBall.obj"
+dest_files=["res://.godot/imported/SpikyBall.obj-54ab70eeeef75b8c8b55768f3c0df3e0.mesh", "res://.godot/imported/SpikyBall.obj-54ab70eeeef75b8c8b55768f3c0df3e0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

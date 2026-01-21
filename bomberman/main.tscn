@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bfmrf3mxu3k87" path="res://map/map.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://b32niowh7fvn5" path="res://enemy/enemy.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://bkmf1wdixaugg" path="res://canvas_layer.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://j4d8q2jpatyb" path="res://heart/heart2.tscn" id="6_7mycd"]
 
 [sub_resource type="GDScript" id="GDScript_1bvp3"]
 script/source = "extends Node3D
@@ -20,9 +21,6 @@ sky = SubResource("Sky_h2yge")
 
 [sub_resource type="Compositor" id="Compositor_lquwl"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_1bvp3"]
-font_size = 35
-
 [node name="main" type="Node3D"]
 script = SubResource("GDScript_1bvp3")
 
@@ -34,7 +32,7 @@ compositor = SubResource("Compositor_lquwl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -9)
 
 [node name="enemy" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 1, 9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9175334, 1.9205637, -5.6897497)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.41701066, 0.9089015, 0, -0.9089015, -0.41701066, 0, 10.60475, 261.4724)
@@ -45,6 +43,78 @@ transform = Transform3D(0.9998273, -0.004371499, -0.018057382, 0.010965925, 0.92
 [node name="map" parent="." instance=ExtResource("3_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 0, -10.5)
 
+[node name="block" parent="block/block2/block2/block" instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.057267834, 0.99835885, 0, -0.99835885, -0.057267834, 0, 0, 0, 1, 16.86001, 0.06341624, -9.392614)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block2" parent="block/block2/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.05313773, 0, -0.9985872, 0, 1, 0, 0.9985872, 0, 0.05313773, 7.268115, 0.95861554, -7.192228)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block3" parent="block/block2/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.05313773, 0, -0.9985872, 0, 1, 0, 0.9985872, 0, 0.05313773, 11.169524, 0.8308246, -7.5658526)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block/block2/block2/block3" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block3" parent="block/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.941132, 0.5758455, -6.1736107)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block/block2/block3" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6006598, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block2" parent="block/block2/block3" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.434875, -0.064374685, -2.63511)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block/block2/block3/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("5_lquwl")
 
@@ -52,7 +122,80 @@ script = ExtResource("5_lquwl")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="LivesLabel" type="Label" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-text = "Vies restantes : ❤️❤️❤️  "
-label_settings = SubResource("LabelSettings_1bvp3")
+[node name="Heart4" parent="CanvasLayer/HBoxContainer" instance=ExtResource("6_7mycd")]
+
+[node name="Heart3" parent="CanvasLayer/HBoxContainer" instance=ExtResource("6_7mycd")]
+
+[node name="Heart2" parent="CanvasLayer/HBoxContainer" instance=ExtResource("6_7mycd")]
+
+[node name="block2" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.200696, 1.603934, -1.2461994)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 3.1459112)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block2" parent="block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06203556, -0.064374685, -0.76984024)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block2/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block3" parent="block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.10614267, 0, 0.9943509, 0, 1, 0, -0.9943509, 0, -0.10614267, 5.917144, -0.18849301, 3.7395084)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block2/block3" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block2" parent="block2/block3" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06203556, -0.064374685, -2.63511)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+
+[node name="block" parent="block2/block3/block2" instance=ExtResource("3_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.103749275, 0.06341624, 1.2806416)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
