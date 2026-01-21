@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdlu62ahl0l6c"]
+
+[ext_resource type="Script" uid="uid://dthi1ayquj6g4" path="res://menu/player_menu.gd" id="1_678s7"]
+
+[sub_resource type="Gradient" id="Gradient_nbkdx"]
+colors = PackedColorArray(1, 0, 0, 1, 0.3372549, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yh01e"]
+gradient = SubResource("Gradient_nbkdx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_05i0t"]
+font_size = 50
+
+[node name="PlayerSelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_678s7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_yh01e")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -417.0
+offset_top = 100.0
+offset_right = 417.0
+offset_bottom = 169.0
+grow_horizontal = 2
+text = "Sélectionnez le nombre de joueurs"
+label_settings = SubResource("LabelSettings_05i0t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -74.0
+offset_right = 191.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "1 Joueur
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "2 Joueurs"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Retour"
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_one_player_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_two_player_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_main_menu_button_button_down"]
