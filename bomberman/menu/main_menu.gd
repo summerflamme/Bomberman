@@ -1,5 +1,5 @@
 extends Control
-@onready var game = preload("res://main.tscn")
+@onready var game = preload("res://map/map.tscn")
 @onready var creditMenu = preload("res://menu/credit_menu.tscn")
 @onready var controlMenu = preload("res://menu/control.tscn")
 

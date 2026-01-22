@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://y01j052q07y4"]
+
+[ext_resource type="PackedScene" uid="uid://docgh88qxkdna" path="res://assets/Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Bomb.gltf" id="1_d0noj"]
+
+[node name="Bomb2" instance=ExtResource("1_d0noj")]

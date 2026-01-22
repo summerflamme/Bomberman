@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfsnqagese8xd"]
+
+[ext_resource type="PackedScene" uid="uid://c4141xgpf4dg" path="res://assets/Ultimate Platformer Pack - Dec 2021/Nature/glTF/Grass_2.gltf" id="1_rrwws"]
+
+[node name="Grass_22" instance=ExtResource("1_rrwws")]

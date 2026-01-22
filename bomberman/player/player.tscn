@@ -1,15 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://e8kfwotlh628"]
+[gd_scene load_steps=4 format=3 uid="uid://e8kfwotlh628"]
 
 [ext_resource type="Script" uid="uid://bbylps8m0t2py" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="PackedScene" uid="uid://drqt3bs734qe5" path="res://player/character.tscn" id="2_rkbax"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_kqu6x"]
-radius = 0.4
-
-[sub_resource type="Skin" id="Skin_oul6g"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkbax"]
-size = Vector3(2.496872, 3.206482, 1.0419922)
+size = Vector3(2.4251938, 3.5665512, 1.5765381)
 
 [node name="player" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -18,15 +13,11 @@ script = ExtResource("1_oul6g")
 
 [node name="Character" parent="." instance=ExtResource("2_rkbax")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
-mesh = SubResource("CapsuleMesh_kqu6x")
-skin = SubResource("Skin_oul6g")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.60383415, 0.79710996, 0, -0.79710996, 0.60383415, -0.048252344, 6.2251515, 4.1156244)
+[node name="playerCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.6038342, 0.79711, 0, -0.79711, 0.6038342, -0.048252344, 6.965186, 4.1156244)
 current = true
+fov = 104.975876
 
 [node name="spriteCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0260849, 1.6285706, -0.063964844)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, 1.8, 0.203)
 shape = SubResource("BoxShape3D_rkbax")

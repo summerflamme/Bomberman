@@ -1,15 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ci226dy7lowpi"]
+[gd_scene load_steps=4 format=3 uid="uid://ci226dy7lowpi"]
+
+[ext_resource type="PackedScene" uid="uid://75xw8nexl2mv" path="res://Block/BreakableBlock_2.tscn" id="1_0fd3n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jjbrs"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jjbrs"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjbrs"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_d5xpt"]
-lightmap_size_hint = Vector2i(14, 21)
-material = SubResource("StandardMaterial3D_jjbrs")
+[sub_resource type="BoxShape3D" id="BoxShape3D_w6x8c"]
+size = Vector3(1.9957275, 1.9810791, 2.0290527)
 
 [node name="Breakable_Wall" type="RigidBody3D"]
 axis_lock_linear_x = true
@@ -20,8 +16,8 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_jjbrs")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_jjbrs")
+[node name="Cube_Crate2" parent="." instance=ExtResource("1_0fd3n")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_d5xpt")
+[node name="CollisionShapeAsset" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0368042, 0.015930176, 0.0072021484)
+shape = SubResource("BoxShape3D_w6x8c")

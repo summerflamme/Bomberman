@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl0evupjhrx2d"]
+
+[ext_resource type="PackedScene" uid="uid://dsf1yjce3f5cl" path="res://Block/cube_grass_single_2.tscn" id="1_frluo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxvdf"]
+size = Vector3(2.1968384, 1.9619141, 2.2392578)
+
+[node name="FloorBlock" type="RigidBody3D"]
+
+[node name="Cube_Grass_Single2" parent="." instance=ExtResource("1_frluo")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005218506, 0.019042969, -0.00016956031)
+shape = SubResource("BoxShape3D_xxvdf")
