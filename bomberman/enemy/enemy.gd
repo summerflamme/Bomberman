@@ -4,7 +4,6 @@ class_name Enemy
 @export var vitesse := 5
 @export var gravity := 9.8
 
-@onready var rayCast: RayCast3D = $FloorDetector
 @onready var anim: AnimationPlayer = $Character/AnimationPlayer
 @onready var sprite: Node3D = $Character
 
@@ -30,8 +29,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = -0.1
 
-	if is_on_floor() and not rayCast.is_colliding():
-		_choose_random_direction()
 
 	velocity.x = direction.x * vitesse
 	velocity.z = direction.z * vitesse

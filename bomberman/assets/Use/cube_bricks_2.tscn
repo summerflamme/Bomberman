@@ -1,5 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbs5ah6he05rs"]
+[gd_scene load_steps=3 format=3 uid="uid://bbs5ah6he05rs"]
 
 [ext_resource type="PackedScene" uid="uid://ba4j2hueqbitg" path="res://assets/Ultimate Platformer Pack - Dec 2021/Cubes/glTF/Cube_Bricks.gltf" id="1_speyj"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_speyj"]
+size = Vector3(1.9863892, 2.012951, 2.0558472)
+
 [node name="Cube_Bricks2" instance=ExtResource("1_speyj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Bricks" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Bricks/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015716553, 0.0025539398, 0.0030212402)
+shape = SubResource("BoxShape3D_speyj")

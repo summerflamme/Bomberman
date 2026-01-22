@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://75xw8nexl2mv"]
+
+[ext_resource type="PackedScene" uid="uid://dqw57l67anfrw" path="res://assets/Ultimate Platformer Pack - Dec 2021/Cubes/glTF/Cube_Crate.gltf" id="1_x3eln"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3eln"]
+size = Vector3(2.0181122, 1.8793335, 2.0159912)
+
+[node name="Cube_Crate2" instance=ExtResource("1_x3eln")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_Crate" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_Crate/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010505676, -0.017913818, -0.03778076)
+shape = SubResource("BoxShape3D_x3eln")

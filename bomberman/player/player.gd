@@ -4,7 +4,7 @@ extends CharacterBody3D
 @onready var anim: AnimationPlayer = $Character/AnimationPlayer
 @onready var sprite: Node3D = $Character
 
-@export var vitesse:= 5
+@export var vitesse:= 10
 @export var gravity:= 9.8
 
 var life: int = 3

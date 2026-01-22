@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkab3qnjyynwv"]
+
+[ext_resource type="PackedScene" uid="uid://nwaxe8b8gq3u" path="res://assets/Ultimate Platformer Pack - Dec 2021/Powerups and Pickups/glTF/Heart.gltf" id="1_hn0f3"]
+
+[node name="Heart2" instance=ExtResource("1_hn0f3")]

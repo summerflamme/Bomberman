@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4i53u45pn0hc"]
+
+[ext_resource type="PackedScene" uid="uid://b0q54ehnnplmr" path="res://assets/Ultimate Platformer Pack - Dec 2021/Nature/glTF/RockPlatform_Tall.gltf" id="1_nklgd"]
+
+[node name="RockPlatform_Tall2" instance=ExtResource("1_nklgd")]

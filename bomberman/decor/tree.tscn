@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://7go0lkk5mggt"]
+
+[ext_resource type="PackedScene" uid="uid://mltpuogx5jwj" path="res://assets/Ultimate Platformer Pack - Dec 2021/Nature/glTF/Tree.gltf" id="1_g4w1e"]
+
+[node name="Tree2" instance=ExtResource("1_g4w1e")]

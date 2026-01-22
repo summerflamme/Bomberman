@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgk5gkvrq7eeg"]
+
+[ext_resource type="Script" uid="uid://d0obcnosrp5ti" path="res://bombe/bombe.gd" id="1_mpodx"]
+[ext_resource type="PackedScene" uid="uid://b6sqoqm67sfbh" path="res://explosion/rigid_body_3d.tscn" id="2_blhvy"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1nppc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpodx"]
+next_pass = SubResource("CanvasItemMaterial_1nppc")
+albedo_color = Color(0.4554031, 1.0769255e-06, 2.1658838e-07, 1)
+refraction_scale = -0.07
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_blhvy"]
+material = SubResource("StandardMaterial3D_mpodx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1nppc"]
+size = Vector3(0.80566406, 0.5701904, 0.6958008)
+
+[node name="bombe" type="RigidBody3D"]
+script = ExtResource("1_mpodx")
+explosion_scene = ExtResource("2_blhvy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.7484556e-08, -0.4, 0, 0.4, -1.7484556e-08, 0, 0, 0, 0.4, 0, 0, -0.1889914)
+mesh = SubResource("CylinderMesh_blhvy")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.7484556e-08, -0.4, 0, 0.4, -1.7484556e-08, 0, 0, 0, 0.4, 0, 0.1712116, -0.034439087)
+mesh = SubResource("CylinderMesh_blhvy")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.019916e-08, 0.4, 0, -0.4, 3.019916e-08, 0, 0, 0, 0.4, 0, 0, 0.11578864)
+mesh = SubResource("CylinderMesh_blhvy")
+skeleton = NodePath("../MeshInstance3D2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0007324219, 0.081970215, -0.032470703)
+shape = SubResource("BoxShape3D_1nppc")
+debug_color = Color(1, 1, 1, 0.41960785)
