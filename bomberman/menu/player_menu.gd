@@ -1,7 +1,7 @@
 extends Control
 
-@onready var one_player_game = preload("res://main.tscn")
-@onready var two_player_game = preload("res://main.tscn")
+@onready var one_player_game = preload("res://map/map.tscn")
+@onready var two_player_game = preload("res://map/2PlayersMap.tscn")
 
 func _on_one_player_btn_button_down() -> void:
 	get_tree().change_scene_to_packed(one_player_game)
