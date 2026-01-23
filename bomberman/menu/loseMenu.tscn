@@ -28,14 +28,17 @@ texture = SubResource("GradientTexture1D_281qn")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -134.0
-offset_top = 199.0
-offset_right = 137.0
-offset_bottom = 244.0
+anchor_bottom = 0.5
+offset_left = -135.5
+offset_top = -74.0
+offset_right = 135.5
+offset_bottom = -29.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "Vous avez perdu !"
 
@@ -46,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 42.0
-offset_right = 139.0
-offset_bottom = 134.0
+offset_left = -144.5
+offset_top = 26.0
+offset_right = 144.5
+offset_bottom = 162.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
