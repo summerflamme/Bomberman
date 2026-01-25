@@ -10,6 +10,8 @@ extends CharacterBody3D
 @export var vitesse := 10.0
 @export var gravity := 9.8
 
+@export var range_explosion := 1
+
 const TILE_SIZE := 2.0
 const MOVE_DURATION := 0.2
 
@@ -137,6 +139,10 @@ func _apply_gravity(delta: float) -> void:
 func _check_collisions() -> void:
 	for i in range(get_slide_collision_count()):
 		var body := get_slide_collision(i).get_collider()
+		
+		if body.has_method("kick"):
+			body.kick(facing_dir)
+
 		if body is Enemy and not invincible:
 			_lose_life()
 			return
@@ -177,6 +183,9 @@ func _place_bomb() -> void:
 	anim.stop()
 	anim.play("Punch")
 	var bomb = bomb_scene.instantiate()
+	bomb.range_explosion = range_explosion
+
+
 	var target_pos = snap_to_grid(global_transform.origin + facing_dir * TILE_SIZE)
 	bomb.global_transform.origin = target_pos
 	get_parent().add_child(bomb)

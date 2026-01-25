@@ -1,16 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgk5gkvrq7eeg"]
+[gd_scene load_steps=6 format=3 uid="uid://bgk5gkvrq7eeg"]
 
 [ext_resource type="Script" uid="uid://d0obcnosrp5ti" path="res://bombe/bombe.gd" id="1_mpodx"]
 [ext_resource type="PackedScene" uid="uid://b0t7iqh17aqgu" path="res://bombe/bomb_2.tscn" id="2_blhvy"]
 [ext_resource type="PackedScene" uid="uid://b6sqoqm67sfbh" path="res://explosion/explosion.tscn" id="2_qy0pg"]
+[ext_resource type="PackedScene" uid="uid://bqr0csowql82c" path="res://bonus/bonus.tscn" id="3_0h8eb"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_blhvy"]
 radius = 0.74170864
 
-[node name="bombe" type="StaticBody3D"]
+[node name="bombe" type="CharacterBody3D"]
 transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.23846436, 0)
 script = ExtResource("1_mpodx")
 explosion_scene = ExtResource("2_qy0pg")
+bonus_scene = ExtResource("3_0h8eb")
 
 [node name="Bomb2" parent="." instance=ExtResource("2_blhvy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35809326, 0)

@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_rkbax"]
 size = Vector3(2.4251938, 3.5665512, 1.5765381)
 
-[node name="player" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D" groups=["player"]]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_oul6g")

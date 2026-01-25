@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://xhbc5x7gebl5"]
+
+[ext_resource type="PackedScene" uid="uid://bfkiwsf67y6l6" path="res://assets/Ultimate Platformer Pack - Dec 2021/Cubes/FBX/Cube_Question.fbx" id="1_xpm0i"]
+
+[node name="Cube_Question" instance=ExtResource("1_xpm0i")]
