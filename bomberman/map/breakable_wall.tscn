@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci226dy7lowpi"]
 
-[ext_resource type="PackedScene" uid="uid://75xw8nexl2mv" path="res://Block/BreakableBlock_2.tscn" id="1_0fd3n"]
+[ext_resource type="PackedScene" uid="uid://75xw8nexl2mv" path="res://Block/cube_create.tscn" id="1_0fd3n"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jjbrs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w6x8c"]
 size = Vector3(1.9957275, 1.9810791, 2.0290527)
 
-[node name="Breakable_Wall" type="RigidBody3D"]
+[node name="Breakable_Wall" type="RigidBody3D" groups=["Breakable"]]
 axis_lock_linear_x = true
 axis_lock_linear_y = true
 axis_lock_linear_z = true

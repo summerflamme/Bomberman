@@ -32,9 +32,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -133.0
-offset_top = 83.0
+offset_top = 35.0
 offset_right = 134.0
-offset_bottom = 171.0
+offset_bottom = 123.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 64
 text = "Contrôle"
@@ -44,10 +44,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 239.0
-offset_top = -122.0
-offset_right = 948.0
-offset_bottom = -67.0
+offset_left = 226.0
+offset_top = -174.0
+offset_right = 947.0
+offset_bottom = -119.0
 grow_vertical = 2
 theme_override_constants/separation = 400
 
@@ -61,35 +61,41 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = 37.0
-offset_right = 433.0
-offset_bottom = 226.0
+offset_left = -210.0
+offset_top = 5.0
+offset_right = 415.0
+offset_bottom = 290.0
 grow_vertical = 0
 
 [node name="Direction" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "Monter
 Gauche
 Descendre 
-Droitre"
+Droitre
+Poser bombe
+Changer de camera "
 
 [node name="zqsd" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "   Z 
    Q 
    S 
-   D"
+   D
+   Espace
+   F"
 
 [node name="arrow" type="Label" parent="HBoxContainer/clavier/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "| arrow_up 
 |  arrow_left 
 |  arrow_down 
-|  arrow_right "
+|  arrow_right 
+| !
+| right shift"
 
 [node name="mannette" type="Label" parent="HBoxContainer"]
 layout_mode = 2
@@ -105,21 +111,23 @@ offset_bottom = 329.0
 
 [node name="Label" type="Label" parent="HBoxContainer/mannette/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "Monter
 Gauche
-Descendre
-Droite
-"
+Descendre 
+Droitre
+Poser bombe
+Changer de camera"
 
 [node name="Label2" type="Label" parent="HBoxContainer/mannette/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 26
 text = "   L3_UP
    L3_LEFT
    L3_down
    L3_right
-"
+  Croix      | A
+  Triangle | Y"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

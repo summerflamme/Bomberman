@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6sqoqm67sfbh"]
+
+[ext_resource type="Script" uid="uid://c62em3o0i3j1j" path="res://explosion/explosion.gd" id="1_echoh"]
+
+[sub_resource type="PlaceholderMaterial" id="PlaceholderMaterial_wtsjk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyprx"]
+next_pass = SubResource("PlaceholderMaterial_wtsjk")
+albedo_color = Color(0.9411765, 0.14509805, 0.101960786, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_lqrpj"]
+material = SubResource("StandardMaterial3D_eyprx")
+size = Vector2(2, 2)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_echoh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.022809444, 0.9997399, 0, -0.9997399, -0.022809444, 0, 0, 0)
+mesh = SubResource("QuadMesh_lqrpj")

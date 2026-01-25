@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnanmigh73vbk"]
 
-[ext_resource type="PackedScene" uid="uid://dsulo1j27hpg5" path="res://Block/block.tscn" id="1_nupwt"]
+[ext_resource type="PackedScene" uid="uid://bbs5ah6he05rs" path="res://Block/cube_bricks_2.tscn" id="1_nupwt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jjbrs"]
 
@@ -16,8 +16,7 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 physics_material_override = SubResource("PhysicsMaterial_jjbrs")
 
-[node name="block" parent="." instance=ExtResource("1_nupwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0043783784, 0.29029262, 0)
+[node name="Cube_Bricks2" parent="." instance=ExtResource("1_nupwt")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005057335, 0.30456042, -0.007296324)

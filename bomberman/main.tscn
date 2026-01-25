@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://brr7xaivy41oo"]
 
 [ext_resource type="PackedScene" uid="uid://e8kfwotlh628" path="res://player/player.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://bfmrf3mxu3k87" path="res://map/map.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b5jf24gls4mah" path="res://map/map.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://b32niowh7fvn5" path="res://enemy/enemy.tscn" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://bkmf1wdixaugg" path="res://canvas_layer.gd" id="5_lquwl"]
-[ext_resource type="PackedScene" uid="uid://j4d8q2jpatyb" path="res://heart/heart2.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://bkmf1wdixaugg" path="res://map/canvas_layer.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" path="res://heart/heart2.tscn" id="6_7mycd"]
 
 [sub_resource type="GDScript" id="GDScript_1bvp3"]
 script/source = "extends Node3D
