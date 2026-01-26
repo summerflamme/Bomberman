@@ -14,7 +14,7 @@ signal enemy_dead
 
 const TILE_SIZE := 2.0
 const MOVE_DURATION := 0.2
-var life := 3
+var life := 10
 var invincible := false
 var can_move := true
 var can_place_bomb := true
@@ -142,8 +142,8 @@ func _update_wall_ray() -> void:
 	wall_detection.target_position = facing_dir * TILE_SIZE
 	
 	
-func _get_cell_in_front_plus_one() -> Vector3i:
-	var front_pos = global_transform.origin + facing_dir * TILE_SIZE * 2 
+func _get_cell_in_front() -> Vector3i:
+	var front_pos = global_transform.origin + facing_dir * TILE_SIZE
 	var local_pos = gridmap.to_local(front_pos)
 	return gridmap.local_to_map(local_pos)
 		
@@ -151,7 +151,7 @@ func _check_wall_and_bomb() -> void:
 	if is_placing_bomb:
 		return
 
-	var cell = _get_cell_in_front_plus_one()
+	var cell = _get_cell_in_front()
 	var item_id = gridmap.get_cell_item(cell)
 	
 	if item_id == 0:  
@@ -201,7 +201,7 @@ func _place_bomb() -> void:
 	nb_bomb -= 1
 
 	var bomb = bomb_scene.instantiate()
-	var target_pos = snap_to_grid(global_transform.origin + facing_dir * TILE_SIZE)
+	var target_pos = snap_to_grid(global_transform.origin)
 	bomb.global_transform.origin = target_pos
 	get_parent().add_child(bomb)
 

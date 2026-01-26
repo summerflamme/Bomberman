@@ -176,7 +176,9 @@ func _lose_life() -> void:
 func _place_bomb() -> void:
 	if nb_bomb <= 0 or is_placing_bomb:
 		return
-
+	
+	var target_pos  = snap_to_grid(global_transform.origin)
+	target_pos.y = 0.0
 	is_placing_bomb = true
 	nb_bomb -= 1
 
@@ -185,8 +187,6 @@ func _place_bomb() -> void:
 	var bomb = bomb_scene.instantiate()
 	bomb.range_explosion = range_explosion
 
-
-	var target_pos = snap_to_grid(global_transform.origin + facing_dir * TILE_SIZE)
 	bomb.global_transform.origin = target_pos
 	get_parent().add_child(bomb)
 
